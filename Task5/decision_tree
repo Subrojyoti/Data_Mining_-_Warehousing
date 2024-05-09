@@ -1,0 +1,18 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+"Root" -> "Root_outlook" [label="outlook"] ;
+"Root_outlook" -> "Root_outlook_rain" [label="rain"] ;
+"Root_outlook" -> "Root_outlook_sunny" [label="sunny"] ;
+"Root_outlook_overcast" [label="yes", shape=ellipse, fillcolor="#9ece9a"] ;
+"Root_outlook" -> "Root_outlook_overcast" [label="overcast"] ;
+"Root_outlook_rain" -> "Root_outlook_rain_wind" [label="wind"] ;
+"Root_outlook_sunny" -> "Root_outlook_sunny_humidity" [label="humidity"] ;
+"Root_outlook_rain_wind_weak" [label="yes", shape=ellipse, fillcolor="#9ece9a"] ;
+"Root_outlook_rain_wind" -> "Root_outlook_rain_wind_weak" [label="weak"] ;
+"Root_outlook_rain_wind_strong" [label="no", shape=ellipse, fillcolor="#ffcccb"] ;
+"Root_outlook_rain_wind" -> "Root_outlook_rain_wind_strong" [label="strong"] ;
+"Root_outlook_sunny_humidity_high" [label="no", shape=ellipse, fillcolor="#ffcccb"] ;
+"Root_outlook_sunny_humidity" -> "Root_outlook_sunny_humidity_high" [label="high"] ;
+"Root_outlook_sunny_humidity_normal" [label="yes", shape=ellipse, fillcolor="#9ece9a"] ;
+"Root_outlook_sunny_humidity" -> "Root_outlook_sunny_humidity_normal" [label="normal"] ;
+}
